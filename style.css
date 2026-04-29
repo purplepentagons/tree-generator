@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Lexend", sans-serif;
+    font-weight: 400;
+    color: #EEEEFF;
+
+    --shadow: #00000077 0px 0px 40px;
+    --background-color: #33333A;
+    text-shadow: 2px 2px 2px #00000077;
+}
+
+html {
+    height: 100%;
+    background-color: var(--background-color);
+    width: 100vw;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    width: 100vw;
+}
+
+canvas {
+    height: 100%;
+    box-shadow: var(--shadow);
+}
+
+.canvas-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plant-settings *, div[class^="settings"] * {
+    margin: 0.5em 0;
+}
+
+.plant-settings {
+    width: 22.5vw;
+    user-select: none;
+    inset-inline-start: 0.5em;
+    overflow-y: scroll;
+    height: 100%;
+    box-shadow: var(--shadow);
+    background-color: #cce2;
+
+    scrollbar-gutter: stable;
+    scrollbar-color: #222225 var(--background-color);
+    scrollbar-width: 1em;
+} 
+
+div[class^="settings"] {
+    background-color: #cce2;
+    margin: 1em;
+    padding: 1em;
+    box-shadow: #00000077 0 0 15px 2px;
+}
+
+div[class^="settings"] div[class^="settings"] {
+    margin: 0;
+}
+
+label div {
+    display: block;
+}
+
+input[type="range"] {
+    flex: 2 0 0px;
+    accent-color: #EEEEFF;
+    width: auto;
+    display: inline;
+}
+
+input[type="number"] {
+    border: none;
+    background-color: #0004;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    width: 6.25ch;
+    padding: 0.25ch;
+    border-radius: 10px;
+}
+
+.setting div {
+    display: flex;
+    gap: 0.5ch;
+}
+
+select {
+    background-color: var(--background-color);
+    border: none;
+}
+
+button {
+    background-color: #00000077;
+    border: none;
+}
